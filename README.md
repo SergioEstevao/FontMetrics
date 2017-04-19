@@ -3,4 +3,4 @@ Font Metric allows you to visualise the metrics of a font in the iOS system. You
 
 ## License
 
-FontMetrics is released under the MIT license. [See LICENSE](https://github.com/SergioEstevao/FontMetrics/blob/master/LICENSE.txt) for details.
+FontMetrics is released under the MIT license. [See LICENSE](LICENSE.txt) for details.

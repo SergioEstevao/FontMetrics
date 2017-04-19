@@ -41,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFontExtension.swift"; sourceTree = "<group>"; };
+		FF6860EE1EA814AB00FD8003 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		FF6860EF1EA814AB00FD8003 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF7AF4B41E97E6D9007B6096 /* FontMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7AF4C11E97E6D9007B6096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,9 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF6860ED1EA8149B00FD8003 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				FF6860EE1EA814AB00FD8003 /* LICENSE.txt */,
+				FF6860EF1EA814AB00FD8003 /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		FF7AF4AB1E97E6D9007B6096 = {
 			isa = PBXGroup;
 			children = (
+				FF6860ED1EA8149B00FD8003 /* Metadata */,
 				FF7AF4B61E97E6D9007B6096 /* FontMetrics */,
 				FF7AF4D01E97E6D9007B6096 /* FontMetricsTests */,
 				FF7AF4DB1E97E6D9007B6096 /* FontMetricsUITests */,

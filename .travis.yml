@@ -1,5 +1,5 @@
 osx_image: xcode8.3
 language: objective-c
-xcode_workspace: Cloudup.xcworkspace
+xcode_workspace: FontMetrics.xcworkspace
 xcode_scheme: FontMetrics
 xcode_sdk: iphonesimulator

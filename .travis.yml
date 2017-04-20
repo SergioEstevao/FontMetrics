@@ -1,0 +1,7 @@
+osx_image: xcode8.3
+language: objective-c
+xcode_project: FontMetrics.xcodeproj
+xcode_scheme: FontMetrics
+xcode_sdk: iphonesimulator
+script:
+- Scripts/build.sh

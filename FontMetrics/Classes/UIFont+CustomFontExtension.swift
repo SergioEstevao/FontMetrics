@@ -30,8 +30,8 @@ extension UIFont {
 
         var localError: Unmanaged<CFError>?
         guard
-             CTFontManagerRegisterGraphicsFont(cgFont, &localError),
-             let fontName = cgFont.postScriptName as String?
+             CTFontManagerRegisterGraphicsFont(cgFont!, &localError),
+             let fontName = cgFont?.postScriptName as String?
         else {
             throw localError!.takeRetainedValue()
         }

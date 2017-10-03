@@ -36,7 +36,7 @@ class FontListViewController: UITableViewController {
 
     // MARK: - Navigation control
 
-    func showDefaultNavigation() {
+    @objc func showDefaultNavigation() {
         navigationItem.titleView = nil
         navigationItem.title = NSLocalizedString("Fonts", comment: "Title for font list view")
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchNavigation(_:)))
@@ -44,7 +44,7 @@ class FontListViewController: UITableViewController {
         navigationItem.setRightBarButtonItems([searchButton], animated: true)
     }
 
-    func showSearchNavigation(_ sender: Any) {
+    @objc func showSearchNavigation(_ sender: Any) {
         navigationItem.title = nil
         navigationItem.setLeftBarButtonItems([], animated: true)
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(showDefaultNavigation))

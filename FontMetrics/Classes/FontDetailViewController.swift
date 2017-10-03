@@ -15,6 +15,11 @@ public class FontDetailViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
+        lineHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        ascenderSizeCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        capHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        xHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        descenderCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
         configureView()
         tableView.reloadData()
     }
@@ -40,17 +45,18 @@ public class FontDetailViewController: UITableViewController {
         fontMetricView.font = font
         fontMetricView.sizeToFit()
 
-        lineHeightCell.detailTextLabel?.text = "\(font.lineHeight)"
-        ascenderSizeCell.detailTextLabel?.text = "\(font.ascender)"
-        capHeightCell.detailTextLabel?.text = "\(font.capHeight)"
-        xHeightCell.detailTextLabel?.text = "\(font.xHeight)"
-        descenderCell.detailTextLabel?.text = "\(font.descender)"
 
-        lineHeightCell.accessoryView = { let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 42)); view.backgroundColor = .white; return view }()
-        ascenderSizeCell.accessoryView = { let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 42)); view.backgroundColor = fontMetricView.ascenderColor; return view }()
-        capHeightCell.accessoryView = { let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 42)); view.backgroundColor = fontMetricView.capColor; return view }()
-        xHeightCell.accessoryView = { let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 42)); view.backgroundColor = fontMetricView.xColor; return view }()
-        descenderCell.accessoryView = { let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 42)); view.backgroundColor = fontMetricView.descenderColor; return view }()
+        lineHeightCell.detailTextLabel?.text = valueFor(metric: font.lineHeight)
+        ascenderSizeCell.detailTextLabel?.text = valueFor(metric:font.ascender)
+        capHeightCell.detailTextLabel?.text = valueFor(metric:font.capHeight)
+        xHeightCell.detailTextLabel?.text = valueFor(metric:font.xHeight)
+        descenderCell.detailTextLabel?.text = valueFor(metric:font.descender)
+
+        lineHeightCell.accessoryView = labelView(color: .white)
+        ascenderSizeCell.accessoryView = labelView(color: fontMetricView.ascenderColor)
+        capHeightCell.accessoryView = labelView(color: fontMetricView.capColor)
+        xHeightCell.accessoryView = labelView(color: fontMetricView.xColor)
+        descenderCell.accessoryView = labelView(color: fontMetricView.descenderColor)
 
         sizeLabel.text = "\(font.pointSize) pt"
     }
@@ -63,6 +69,27 @@ public class FontDetailViewController: UITableViewController {
         let newSize = CGFloat(floor(sender.value))
         font = font?.withSize(newSize)
         tableView.reloadSections(IndexSet([0]), with: .none)
+    }
+
+    lazy var numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 3
+        formatter.minimumFractionDigits = 3
+        return formatter
+    }()
+
+    func valueFor(metric: CGFloat) -> String {
+        guard let result = numberFormatter.string(from: NSNumber(value: Float(fabs(metric)))) else {
+            return "NA"
+        }
+        return result
+    }
+
+    func labelView(color: UIColor) -> UIView {
+        let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 20))
+        view.backgroundColor = color
+        view.layer.cornerRadius = 5
+        return view
     }
 
 }

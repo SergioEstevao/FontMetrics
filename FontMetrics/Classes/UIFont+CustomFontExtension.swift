@@ -6,7 +6,7 @@ extension UIFont {
     convenience init?(ctFont: CTFont) {
         let fontName = CTFontCopyPostScriptName(ctFont) as String
         let size = CTFontGetSize(ctFont)
-        self.init(name:fontName, size:size)
+        self.init(name: fontName, size: size)
     }
 
     var CTFontRef: CTFont {
@@ -17,7 +17,7 @@ extension UIFont {
     convenience init?(url: URL, size: CGFloat) throws {
         let data = try Data(contentsOf: url, options: .uncached)
         let fontName = try UIFont.registerFontFrom(data: data)
-        self.init(name: fontName, size:size)
+        self.init(name: fontName, size: size)
     }
 
     static func registerFontFrom(data: Data) throws -> String {

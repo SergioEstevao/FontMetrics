@@ -47,10 +47,10 @@ public class FontDetailViewController: UITableViewController {
 
 
         lineHeightCell.detailTextLabel?.text = valueFor(metric: font.lineHeight)
-        ascenderSizeCell.detailTextLabel?.text = valueFor(metric:font.ascender)
-        capHeightCell.detailTextLabel?.text = valueFor(metric:font.capHeight)
-        xHeightCell.detailTextLabel?.text = valueFor(metric:font.xHeight)
-        descenderCell.detailTextLabel?.text = valueFor(metric:font.descender)
+        ascenderSizeCell.detailTextLabel?.text = valueFor(metric: font.ascender)
+        capHeightCell.detailTextLabel?.text = valueFor(metric: font.capHeight)
+        xHeightCell.detailTextLabel?.text = valueFor(metric: font.xHeight)
+        descenderCell.detailTextLabel?.text = valueFor(metric: font.descender)
 
         lineHeightCell.accessoryView = labelView(color: .white)
         ascenderSizeCell.accessoryView = labelView(color: fontMetricView.ascenderColor)
@@ -86,7 +86,7 @@ public class FontDetailViewController: UITableViewController {
     }
 
     func labelView(color: UIColor) -> UIView {
-        let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 20))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         view.backgroundColor = color
         view.layer.cornerRadius = 5
         return view

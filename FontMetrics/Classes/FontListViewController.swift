@@ -59,7 +59,7 @@ class FontListViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let fontName: String = fonts[indexPath.section][indexPath.row]
-                let font = UIFont(name:fontName, size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
+                let font = UIFont(name: fontName, size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
                 let controller = (segue.destination as! UINavigationController).topViewController as! FontDetailViewController
                 controller.font = font
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem

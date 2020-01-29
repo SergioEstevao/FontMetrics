@@ -13,7 +13,7 @@ public class FontDetailViewController: UITableViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         lineHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
         ascenderSizeCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
@@ -62,7 +62,7 @@ public class FontDetailViewController: UITableViewController {
     }
 
     override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
     @IBAction func changeSize(sender: UISlider) {
@@ -79,7 +79,7 @@ public class FontDetailViewController: UITableViewController {
     }()
 
     func valueFor(metric: CGFloat) -> String {
-        guard let result = numberFormatter.string(from: NSNumber(value: Float(fabs(metric)))) else {
+        guard let result = numberFormatter.string(from: NSNumber(value: Float(abs(metric)))) else {
             return "NA"
         }
         return result

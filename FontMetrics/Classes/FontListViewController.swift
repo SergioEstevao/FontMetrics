@@ -25,7 +25,7 @@ class FontListViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FontDetailViewController
         }
         searchFont(byName: "")
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
     }
 
@@ -97,7 +97,7 @@ class FontListViewController: UITableViewController {
         return false
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
     }
 

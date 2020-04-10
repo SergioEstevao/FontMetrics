@@ -17,6 +17,7 @@
 		FF7AF4F01E97E89A007B6096 /* FontDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4EC1E97E89A007B6096 /* FontDetailViewController.swift */; };
 		FF7AF4F11E97E89A007B6096 /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4ED1E97E89A007B6096 /* FontListViewController.swift */; };
 		FF7AF4F21E97E89A007B6096 /* FontMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */; };
+		FF90300223E1F90200D5626D /* FontListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF90300123E1F90200D5626D /* FontListView.swift */; };
 		FFA7F0CF1EA40888007D3244 /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0CE1EA40888007D3244 /* Icon-64.png */; };
 		FFA7F0D11EA40953007D3244 /* Icon-320.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0D01EA40953007D3244 /* Icon-320.png */; };
 		FFA7F0D31EA40BC9007D3244 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7F0D21EA40BC9007D3244 /* FontManager.swift */; };
@@ -58,6 +59,7 @@
 		FF7AF4EC1E97E89A007B6096 /* FontDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontDetailViewController.swift; sourceTree = "<group>"; };
 		FF7AF4ED1E97E89A007B6096 /* FontListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
 		FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontMetricsView.swift; sourceTree = "<group>"; };
+		FF90300123E1F90200D5626D /* FontListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontListView.swift; sourceTree = "<group>"; };
 		FFA7F0CE1EA40888007D3244 /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
 		FFA7F0D01EA40953007D3244 /* Icon-320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-320.png"; sourceTree = "<group>"; };
 		FFA7F0D21EA40BC9007D3244 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */,
 				FFA7F0D21EA40BC9007D3244 /* FontManager.swift */,
 				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
+				FF90300123E1F90200D5626D /* FontListView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				FF7AF4F21E97E89A007B6096 /* FontMetricsView.swift in Sources */,
 				FF7AF4F11E97E89A007B6096 /* FontListViewController.swift in Sources */,
 				FF7AF4F01E97E89A007B6096 /* FontDetailViewController.swift in Sources */,
+				FF90300223E1F90200D5626D /* FontListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

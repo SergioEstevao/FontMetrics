@@ -15,17 +15,21 @@ public class FontDetailViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
-        lineHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
-        ascenderSizeCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
-        capHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
-        xHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
-        descenderCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        let digitFont = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
+        lineHeightCell.detailTextLabel?.font = digitFont
+        ascenderSizeCell.detailTextLabel?.font = digitFont
+        capHeightCell.detailTextLabel?.font = digitFont
+        xHeightCell.detailTextLabel?.font = digitFont
+        descenderCell.detailTextLabel?.font = digitFont
         configureView()
         tableView.reloadData()
     }
 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if font == nil {
+            font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        }
         configureView()
     }
 
@@ -42,6 +46,7 @@ public class FontDetailViewController: UITableViewController {
             return
         }
         self.title = font.fontName
+        self.navigationItem.title = font.fontName
         fontMetricView.font = font
         fontMetricView.sizeToFit()
 
@@ -59,6 +64,8 @@ public class FontDetailViewController: UITableViewController {
         descenderCell.accessoryView = labelView(color: fontMetricView.descenderColor)
 
         sizeLabel.text = "\(font.pointSize) pt"
+        sizeSlider.value = Float(font.pointSize)
+        fontMetricView.text = font.fontName
     }
 
     override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACB2441365E00ACA032 /* FontDetailView.swift */; };
+		FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACD2441DC7F00ACA032 /* Style.swift */; };
 		FF5CA0CC1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */; };
 		FF7AF4C21E97E6D9007B6096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C01E97E6D9007B6096 /* Main.storyboard */; };
 		FF7AF4C41E97E6D9007B6096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF4DEACB2441365E00ACA032 /* FontDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDetailView.swift; sourceTree = "<group>"; };
+		FF4DEACD2441DC7F00ACA032 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFontExtension.swift"; sourceTree = "<group>"; };
 		FF6860EE1EA814AB00FD8003 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FF6860EF1EA814AB00FD8003 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				FFA7F0D21EA40BC9007D3244 /* FontManager.swift */,
 				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
 				FF90300123E1F90200D5626D /* FontListView.swift */,
+				FF4DEACB2441365E00ACA032 /* FontDetailView.swift */,
+				FF4DEACD2441DC7F00ACA032 /* Style.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -344,8 +350,10 @@
 				FF7AF4EF1E97E89A007B6096 /* AppDelegate.swift in Sources */,
 				FF5CA0CC1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift in Sources */,
 				FF7AF4F21E97E89A007B6096 /* FontMetricsView.swift in Sources */,
+				FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */,
 				FF7AF4F11E97E89A007B6096 /* FontListViewController.swift in Sources */,
 				FF7AF4F01E97E89A007B6096 /* FontDetailViewController.swift in Sources */,
+				FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */,
 				FF90300223E1F90200D5626D /* FontListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

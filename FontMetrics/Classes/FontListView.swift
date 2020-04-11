@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FontDetailView: UIViewControllerRepresentable {
+struct FontDetailWrapperView: UIViewControllerRepresentable {
 
     let font: UIFont
 
@@ -27,14 +27,15 @@ struct FontListView: View {
                 ForEach(fontFamilies.keys.sorted(), id: \.self) { familyName in
                     Section(header: Text(familyName)) {
                         ForEach( self.fontFamilies[familyName]!, id: \.self) { fontName in
-                            NavigationLink(fontName, destination: FontDetailView(font: UIFont(name: fontName, size: UIFont.systemFontSize)!).navigationBarTitle(fontName))
+                            NavigationLink(fontName, destination: FontDetailView(
+                                    fontName: fontName).navigationBarTitle(fontName))
                         }
                     }
                 }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Fonts"))
-            FontDetailView(font: defaultFont).navigationBarTitle(defaultFont.fontName)
+            FontDetailView(fontName: defaultFont.fontName).navigationBarTitle(defaultFont.fontName)
         }
     }
 }

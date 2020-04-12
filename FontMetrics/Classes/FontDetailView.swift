@@ -7,7 +7,7 @@ struct FontMetricRowView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "square").foregroundColor(color)
+            Image(systemName: "square.fill").foregroundColor(color)
             Text(label)
             Spacer()
             Text("\(value as NSNumber, formatter: Style.metricFormatter)")

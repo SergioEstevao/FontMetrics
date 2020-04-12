@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FontDetailWrapperView: UIViewControllerRepresentable {
 
-    let font: UIFont
+    let fontName: String
 
     func makeUIViewController(context: Context) -> FontDetailViewController {
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
@@ -11,7 +11,7 @@ struct FontDetailWrapperView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: FontDetailViewController, context: Context) {
-        uiViewController.font = font
+        uiViewController.font = UIFont(name: fontName, size: 12)!
     }
 
 }

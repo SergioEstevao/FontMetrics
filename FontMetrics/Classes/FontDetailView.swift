@@ -19,7 +19,6 @@ struct FontMetricRowView: View {
 struct FontDetailView: View {
 
     let fontName: String
-
     var content: State<String>
     var size: State<Float>
     var font: State<UIFont>
@@ -36,8 +35,7 @@ struct FontDetailView: View {
             Section(header: Text("Preview")) {
                 HStack {
                     Spacer()
-                    TextField("Metrics", text: content.projectedValue).font(font.wrappedValue.font).textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                    FontMetricsTextView(placeholder: "Metrics", text: content.wrappedValue ).font(font.projectedValue)
                     Spacer()
                 }
             }
@@ -46,16 +44,16 @@ struct FontDetailView: View {
                     Slider(value: size.projectedValue, in: 10...60, step: 1, onEditingChanged: { changing  in
                         self.font.wrappedValue = UIFont(name: self.fontName, size: CGFloat(self.size.wrappedValue))!
                         })
-                    Text("\(Int(size.wrappedValue))")
+                    Text("\(Int(size.wrappedValue))pt")
                 }
             }
             Section(header: Text("Metrics")) {
                 FontMetricRowView(label: "Size:", value: font.wrappedValue.pointSize, color: .clear)
-                FontMetricRowView(label: "Line Height:", value: font.wrappedValue.lineHeight, color: .red)
-                FontMetricRowView(label: "Ascender:", value: font.wrappedValue.ascender, color: .blue)
+                FontMetricRowView(label: "Line Height:", value: font.wrappedValue.lineHeight, color: .clear)
+                FontMetricRowView(label: "Ascender:", value: font.wrappedValue.ascender, color: .red)
                 FontMetricRowView(label: "Descender:", value: font.wrappedValue.descender, color: .green)
-                FontMetricRowView(label: "Cap Height:", value: font.wrappedValue.capHeight, color: .green)
-                FontMetricRowView(label: "x Height:", value: font.wrappedValue.xHeight, color: .orange)
+                FontMetricRowView(label: "Cap Height:", value: font.wrappedValue.capHeight, color: .purple)
+                FontMetricRowView(label: "x Height:", value: font.wrappedValue.xHeight, color: .blue)
             }
         }
     }

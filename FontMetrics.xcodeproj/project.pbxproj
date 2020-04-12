@@ -10,14 +10,11 @@
 		FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACB2441365E00ACA032 /* FontDetailView.swift */; };
 		FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACD2441DC7F00ACA032 /* Style.swift */; };
 		FF5CA0CC1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */; };
-		FF7AF4C21E97E6D9007B6096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C01E97E6D9007B6096 /* Main.storyboard */; };
 		FF7AF4C41E97E6D9007B6096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */; };
 		FF7AF4C71E97E6D9007B6096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C51E97E6D9007B6096 /* LaunchScreen.storyboard */; };
 		FF7AF4D21E97E6D9007B6096 /* FontMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4D11E97E6D9007B6096 /* FontMetricsTests.swift */; };
 		FF7AF4DD1E97E6DA007B6096 /* FontMetricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4DC1E97E6DA007B6096 /* FontMetricsUITests.swift */; };
 		FF7AF4EF1E97E89A007B6096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4EB1E97E89A007B6096 /* AppDelegate.swift */; };
-		FF7AF4F01E97E89A007B6096 /* FontDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4EC1E97E89A007B6096 /* FontDetailViewController.swift */; };
-		FF7AF4F11E97E89A007B6096 /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4ED1E97E89A007B6096 /* FontListViewController.swift */; };
 		FF7AF4F21E97E89A007B6096 /* FontMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */; };
 		FF90300223E1F90200D5626D /* FontListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF90300123E1F90200D5626D /* FontListView.swift */; };
 		FFA7F0CF1EA40888007D3244 /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0CE1EA40888007D3244 /* Icon-64.png */; };
@@ -49,7 +46,6 @@
 		FF6860EE1EA814AB00FD8003 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FF6860EF1EA814AB00FD8003 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF7AF4B41E97E6D9007B6096 /* FontMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7AF4C11E97E6D9007B6096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF7AF4C61E97E6D9007B6096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF7AF4C81E97E6D9007B6096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +56,6 @@
 		FF7AF4DC1E97E6DA007B6096 /* FontMetricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsUITests.swift; sourceTree = "<group>"; };
 		FF7AF4DE1E97E6DA007B6096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7AF4EB1E97E89A007B6096 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF7AF4EC1E97E89A007B6096 /* FontDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontDetailViewController.swift; sourceTree = "<group>"; };
-		FF7AF4ED1E97E89A007B6096 /* FontListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
 		FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontMetricsView.swift; sourceTree = "<group>"; };
 		FF90300123E1F90200D5626D /* FontListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontListView.swift; sourceTree = "<group>"; };
 		FFA7F0CE1EA40888007D3244 /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
@@ -157,8 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				FF7AF4EB1E97E89A007B6096 /* AppDelegate.swift */,
-				FF7AF4EC1E97E89A007B6096 /* FontDetailViewController.swift */,
-				FF7AF4ED1E97E89A007B6096 /* FontListViewController.swift */,
 				FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */,
 				FFA7F0D21EA40BC9007D3244 /* FontManager.swift */,
 				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
@@ -172,7 +164,6 @@
 		FF7AF4F31E97E934007B6096 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				FF7AF4C01E97E6D9007B6096 /* Main.storyboard */,
 				FF7AF4C51E97E6D9007B6096 /* LaunchScreen.storyboard */,
 				FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */,
 			);
@@ -304,7 +295,6 @@
 				FF7AF4C41E97E6D9007B6096 /* Assets.xcassets in Resources */,
 				FFA7F0CF1EA40888007D3244 /* Icon-64.png in Resources */,
 				FFA7F0D11EA40953007D3244 /* Icon-320.png in Resources */,
-				FF7AF4C21E97E6D9007B6096 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +341,6 @@
 				FF5CA0CC1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift in Sources */,
 				FF7AF4F21E97E89A007B6096 /* FontMetricsView.swift in Sources */,
 				FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */,
-				FF7AF4F11E97E89A007B6096 /* FontListViewController.swift in Sources */,
-				FF7AF4F01E97E89A007B6096 /* FontDetailViewController.swift in Sources */,
 				FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */,
 				FF90300223E1F90200D5626D /* FontListView.swift in Sources */,
 			);
@@ -390,14 +378,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FF7AF4C01E97E6D9007B6096 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF7AF4C11E97E6D9007B6096 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FF7AF4C51E97E6D9007B6096 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

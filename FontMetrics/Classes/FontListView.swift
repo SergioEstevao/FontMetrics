@@ -1,21 +1,5 @@
 import SwiftUI
 
-struct FontDetailWrapperView: UIViewControllerRepresentable {
-
-    let fontName: String
-
-    func makeUIViewController(context: Context) -> FontDetailViewController {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-        let fontDetailVC = storyboard.instantiateViewController(identifier: "fontDetail") as FontDetailViewController
-        return fontDetailVC
-    }
-
-    func updateUIViewController(_ uiViewController: FontDetailViewController, context: Context) {
-        uiViewController.font = UIFont(name: fontName, size: 12)!
-    }
-
-}
-
 struct FontListView: View {
     @State var searchQuery: String = ""
     private let fontFamilies = UIFont.fontFamilies

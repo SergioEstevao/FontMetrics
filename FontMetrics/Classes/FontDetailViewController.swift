@@ -13,7 +13,7 @@ public class FontDetailViewController: UITableViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         lineHeightCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
         ascenderSizeCell.detailTextLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .regular)
@@ -47,10 +47,10 @@ public class FontDetailViewController: UITableViewController {
 
 
         lineHeightCell.detailTextLabel?.text = valueFor(metric: font.lineHeight)
-        ascenderSizeCell.detailTextLabel?.text = valueFor(metric:font.ascender)
-        capHeightCell.detailTextLabel?.text = valueFor(metric:font.capHeight)
-        xHeightCell.detailTextLabel?.text = valueFor(metric:font.xHeight)
-        descenderCell.detailTextLabel?.text = valueFor(metric:font.descender)
+        ascenderSizeCell.detailTextLabel?.text = valueFor(metric: font.ascender)
+        capHeightCell.detailTextLabel?.text = valueFor(metric: font.capHeight)
+        xHeightCell.detailTextLabel?.text = valueFor(metric: font.xHeight)
+        descenderCell.detailTextLabel?.text = valueFor(metric: font.descender)
 
         lineHeightCell.accessoryView = labelView(color: .white)
         ascenderSizeCell.accessoryView = labelView(color: fontMetricView.ascenderColor)
@@ -62,7 +62,7 @@ public class FontDetailViewController: UITableViewController {
     }
 
     override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
     @IBAction func changeSize(sender: UISlider) {
@@ -79,14 +79,14 @@ public class FontDetailViewController: UITableViewController {
     }()
 
     func valueFor(metric: CGFloat) -> String {
-        guard let result = numberFormatter.string(from: NSNumber(value: Float(fabs(metric)))) else {
+        guard let result = numberFormatter.string(from: NSNumber(value: Float(abs(metric)))) else {
             return "NA"
         }
         return result
     }
 
     func labelView(color: UIColor) -> UIView {
-        let view = UIView(frame:CGRect(x:0, y:0, width:20, height: 20))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         view.backgroundColor = color
         view.layer.cornerRadius = 5
         return view

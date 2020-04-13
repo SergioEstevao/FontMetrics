@@ -25,7 +25,7 @@ class FontListViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FontDetailViewController
         }
         searchFont(byName: "")
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
     }
 
@@ -59,7 +59,7 @@ class FontListViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let fontName: String = fonts[indexPath.section][indexPath.row]
-                let font = UIFont(name:fontName, size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
+                let font = UIFont(name: fontName, size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
                 let controller = (segue.destination as! UINavigationController).topViewController as! FontDetailViewController
                 controller.font = font
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
@@ -97,7 +97,7 @@ class FontListViewController: UITableViewController {
         return false
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
     }
 

@@ -50,7 +50,7 @@ import UIKit
 
         //baseLine
         context.setLineWidth(2.0)
-        context.move(to:CGPoint(x: 0, y: baseLine))
+        context.move(to: CGPoint(x: 0, y: baseLine))
         context.addLine(to: CGPoint(x: frame.size.width, y: baseLine))
         context.setStrokeColor(baseLineColor.cgColor)
         context.strokePath()

@@ -4,8 +4,6 @@ import SwiftUI
 
 struct Style {
 
-    static let digitFont = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: .semibold)
-
     static let metricFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 3

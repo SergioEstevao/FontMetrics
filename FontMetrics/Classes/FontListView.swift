@@ -3,7 +3,6 @@ import SwiftUI
 struct FontListView: View {
     @State var searchQuery: String = ""
     private let fontFamilies = UIFont.fontFamilies
-    private let defaultFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
     @State var searchVisible: Bool = false
 
     private var fontSource: [String] {
@@ -16,10 +15,14 @@ struct FontListView: View {
         return result
     }
 
+    private var defaultFontName: String {
+        return fontFamilies[fontSource[0]]![0]
+    }
+
     var body: some View {
         NavigationView {
             List {
-                if ( searchVisible ) {
+                if searchVisible {
                     Section(header: Text("Search")) {
                         TextField("Search", text: $searchQuery)
                     }
@@ -40,7 +43,7 @@ struct FontListView: View {
             }, label: {
                 Image(systemName: "magnifyingglass")
             }))
-            FontDetailView(fontName: defaultFont.fontName).navigationBarTitle(defaultFont.fontName)
+            FontDetailView(fontName: defaultFontName).navigationBarTitle(defaultFontName)
         }
     }
 }

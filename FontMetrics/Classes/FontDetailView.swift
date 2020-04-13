@@ -11,7 +11,7 @@ struct FontMetricRowView: View {
             Text(label)
             Spacer()
             Text("\(value as NSNumber, formatter: Style.metricFormatter)")
-                .font(Style.digitFont.font)
+                .font(Font.body.monospacedDigit())
         }
     }
 }

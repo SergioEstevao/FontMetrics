@@ -55,6 +55,12 @@ struct FontDetailView: View {
                 FontMetricRowView(label: "Cap Height:", value: font.wrappedValue.capHeight, color: .purple)
                 FontMetricRowView(label: "x Height:", value: font.wrappedValue.xHeight, color: .blue)
             }
+            Section(header: Text("Traits")) {
+                Text(font.wrappedValue.traitsPresent)
+            }
+            Section(header: Text("Classes")) {
+                Text(font.wrappedValue.classesPresent)
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ struct FontListView: View {
 
     private var fontSource: [String] {
         var result = fontFamilies.keys.sorted()
-        if searchQuery != "" {
+        if !searchQuery.trimmingCharacters(in: .whitespaces).isEmpty {
             result = result.filter({ (fontFamily) -> Bool in
                 fontFamily.localizedCaseInsensitiveContains(searchQuery)
             })
@@ -16,7 +16,10 @@ struct FontListView: View {
     }
 
     private var defaultFontName: String {
-        return fontFamilies[fontSource[0]]![0]
+        guard let name = fontFamilies.keys.sorted().first else {
+            return ""
+        }
+        return fontFamilies[name]![0]
     }
 
     var body: some View {
@@ -31,7 +34,7 @@ struct FontListView: View {
                     Section(header: Text(familyName)) {
                         ForEach( self.fontFamilies[familyName]!, id: \.self) { fontName in
                             NavigationLink(fontName, destination: FontDetailView(
-                                    fontName: fontName).navigationBarTitle(fontName))
+                                fontName: fontName).navigationBarTitle(fontName))
                         }
                     }
                 }

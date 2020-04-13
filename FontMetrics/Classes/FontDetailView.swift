@@ -16,6 +16,22 @@ struct FontMetricRowView: View {
     }
 }
 
+struct FontTraitRowView: View {
+    let label: String
+    let font: UIFont
+    let trait: UIFontDescriptor.SymbolicTraits
+
+    var body: some View {
+        HStack {
+            Text(label)
+            Spacer()
+            if font.fontDescriptor.symbolicTraits.contains(trait) {
+                Image(systemName: "checkmark").foregroundColor(.green)
+            }
+        }
+    }
+}
+
 struct FontDetailView: View {
 
     let fontName: String
@@ -54,6 +70,16 @@ struct FontDetailView: View {
                 FontMetricRowView(label: "Descender:", value: font.wrappedValue.descender, color: .green)
                 FontMetricRowView(label: "Cap Height:", value: font.wrappedValue.capHeight, color: .purple)
                 FontMetricRowView(label: "x Height:", value: font.wrappedValue.xHeight, color: .blue)
+            }
+            Section(header: Text("Traits")) {
+                FontTraitRowView(label: "Bold", font: font.wrappedValue, trait: .traitBold )
+                FontTraitRowView(label: "Italic", font: font.wrappedValue, trait: .traitItalic )
+                FontTraitRowView(label: "Condensed", font: font.wrappedValue, trait: .traitCondensed )
+                FontTraitRowView(label: "Expanded", font: font.wrappedValue, trait: .traitExpanded )
+                FontTraitRowView(label: "Vertical", font: font.wrappedValue, trait: .traitVertical )
+                FontTraitRowView(label: "Monospace", font: font.wrappedValue, trait: .traitMonoSpace )
+                FontTraitRowView(label: "Loose Leading", font: font.wrappedValue, trait: .traitLooseLeading )
+                FontTraitRowView(label: "Tight Leading", font: font.wrappedValue, trait: .traitTightLeading )
             }
         }
     }

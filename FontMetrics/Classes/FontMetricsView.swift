@@ -1,5 +1,34 @@
 import Foundation
 import UIKit
+import SwiftUI
+
+struct FontMetricsTextView: UIViewRepresentable {
+
+    var font: Binding<UIFont> = .constant(UIFont.systemFont(ofSize: 12))
+
+    let placeholder: String
+
+    let text: String
+
+    func makeUIView(context: Context) -> FontMetricsView {
+        let view = FontMetricsView()
+        view.textAlignment = .center
+        view.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.font: font.wrappedValue])
+        view.text = text
+        return view
+    }
+
+    func updateUIView(_ uiView: FontMetricsView, context: Context) {
+        uiView.font = font.wrappedValue
+        uiView.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.font: font.wrappedValue])
+    }
+
+    func font(_ value: Binding<UIFont>) -> FontMetricsTextView {
+        var new = self
+        new.font = value
+        return new
+    }
+}
 
 @IBDesignable public class FontMetricsView: UITextField {
 

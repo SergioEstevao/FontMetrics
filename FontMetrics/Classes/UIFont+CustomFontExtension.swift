@@ -68,4 +68,14 @@ extension UIFont {
         })
     }
 
+    static var fontFamilies: [String: [String]] {
+        get {
+            var result = [String: [String]]()
+            result = familyNames.reduce(into: result) { (result, fontFamilyName) in
+                result[fontFamilyName] = UIFont.fontNames(forFamilyName: fontFamilyName)
+            }
+            return result
+        }
+    }
+
 }

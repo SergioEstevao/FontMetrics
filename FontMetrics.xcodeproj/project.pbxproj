@@ -11,6 +11,7 @@
 		FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACD2441DC7F00ACA032 /* Style.swift */; };
 		FF4DEAD02444BF8800ACA032 /* UIFont+Traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEACF2444BF8800ACA032 /* UIFont+Traits.swift */; };
 		FF4DEAD22445259400ACA032 /* UIFont+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEAD12445259400ACA032 /* UIFont+SwiftUI.swift */; };
+		FF4DEAD42445FB4400ACA032 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4DEAD32445FB4400ACA032 /* SnapshotHelper.swift */; };
 		FF5CA0CC1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */; };
 		FF7AF4C41E97E6D9007B6096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C31E97E6D9007B6096 /* Assets.xcassets */; };
 		FF7AF4C71E97E6D9007B6096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7AF4C51E97E6D9007B6096 /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		FF4DEACD2441DC7F00ACA032 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		FF4DEACF2444BF8800ACA032 /* UIFont+Traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Traits.swift"; sourceTree = "<group>"; };
 		FF4DEAD12445259400ACA032 /* UIFont+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+SwiftUI.swift"; sourceTree = "<group>"; };
+		FF4DEAD32445FB4400ACA032 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFontExtension.swift"; sourceTree = "<group>"; };
 		FF6860EE1EA814AB00FD8003 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FF6860EF1EA814AB00FD8003 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		FF7AF4DB1E97E6D9007B6096 /* FontMetricsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FF4DEAD32445FB4400ACA032 /* SnapshotHelper.swift */,
 				FF7AF4DC1E97E6DA007B6096 /* FontMetricsUITests.swift */,
 				FF7AF4DE1E97E6DA007B6096 /* Info.plist */,
 			);
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7AF4DD1E97E6DA007B6096 /* FontMetricsUITests.swift in Sources */,
+				FF4DEAD42445FB4400ACA032 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

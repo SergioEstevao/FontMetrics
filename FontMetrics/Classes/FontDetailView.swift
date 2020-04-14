@@ -16,6 +16,20 @@ struct FontMetricRowView: View {
     }
 }
 
+struct FontStylesRowView: View {
+    let label: String
+    let font: UIFont
+    let style: UIFont.TextStyle
+
+    var body: some View {
+        HStack {
+            Text(label).font(Font.custom(font, style: style))
+            Spacer()
+            Text("\(Int(UIFont.preferredFont(forTextStyle: style).pointSize))")
+        }
+    }
+}
+
 struct FontDetailView: View {
 
     let fontName: String
@@ -60,6 +74,18 @@ struct FontDetailView: View {
             }
             Section(header: Text("Classes")) {
                 Text(font.wrappedValue.classesPresent)
+            }
+            Section(header: Text("Styles")) {
+                FontStylesRowView(label: "Large Title", font: font.wrappedValue, style: .largeTitle)
+                FontStylesRowView(label: "Title 1", font: font.wrappedValue, style: .title1)
+                FontStylesRowView(label: "Title 2", font: font.wrappedValue, style: .title2)
+                FontStylesRowView(label: "Headline", font: font.wrappedValue, style: .headline)
+                FontStylesRowView(label: "Sub Headline", font: font.wrappedValue, style: .subheadline)
+                FontStylesRowView(label: "Body", font: font.wrappedValue, style: .body)
+                FontStylesRowView(label: "Callout", font: font.wrappedValue, style: .callout)
+                FontStylesRowView(label: "Caption 1", font: font.wrappedValue, style: .caption1)
+                FontStylesRowView(label: "Caption 2", font: font.wrappedValue, style: .caption2)
+                FontStylesRowView(label: "Footnote", font: font.wrappedValue, style: .footnote)
             }
         }
     }

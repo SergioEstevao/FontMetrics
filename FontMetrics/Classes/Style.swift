@@ -13,12 +13,6 @@ struct Style {
 
 }
 
-extension UIFont {
-    var font: Font {
-        return Font(self.CTFontRef)
-    }
-}
-
 extension String.StringInterpolation {
     mutating func appendInterpolation(_ number: NSNumber, formatter: NumberFormatter) {
         if let result = formatter.string(from: number as NSNumber) {

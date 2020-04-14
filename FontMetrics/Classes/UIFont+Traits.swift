@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SwiftUI
 
 extension UIFont {
 

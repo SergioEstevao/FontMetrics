@@ -1,0 +1,8 @@
+app_identifier("com.sergioestevao.fontmetrics") # The bundle identifier of your app
+apple_id("sergio.estevao@gmail.com") # Your Apple email address
+
+itc_team_id("18022") # App Store Connect Team ID
+team_id("EU2XG9855J") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

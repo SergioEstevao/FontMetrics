@@ -14,7 +14,7 @@ class FontManager {
     }
 
     private func loadFonts() {
-        guard let dict = UserDefaults.standard.object(forKey: FontManager.downloadedFonts) as? [String:String] else {
+        guard let dict = UserDefaults.standard.object(forKey: FontManager.downloadedFonts) as? [String: String] else {
             return
         }
         fontsDownloaded = dict
@@ -26,15 +26,15 @@ class FontManager {
                 fontsDownloaded.removeValue(forKey: fontName)
                 continue
             }
-            let _ = try? UIFont.registerFontFrom(data:data)
+            let _ = try? UIFont.registerFontFrom(data: data)
         }
     }
 
     @discardableResult func addFont(fromURL url: URL) throws -> String {
 
-        let data = try Data(contentsOf:url, options:.uncached)
+        let data = try Data(contentsOf: url, options: .uncached)
 
-        let name = try UIFont.registerFontFrom(data:data)
+        let name = try UIFont.registerFontFrom(data: data)
 
         guard let baseFolder = FontManager.fontFolder() else {
             return ""
@@ -42,7 +42,7 @@ class FontManager {
 
         let fileName = uniqueFilename(withPrefix: name, andExtension: "ttf")
         let fontPath = baseFolder.appendingPathComponent(fileName)
-        try data.write(to: fontPath, options:[.atomic])
+        try data.write(to: fontPath, options: [.atomic])
 
         fontsDownloaded[name] = fileName
 
@@ -64,7 +64,7 @@ class FontManager {
         let _ = try UIFont.unregisterFont(named: name)
 
         // save it to userDefaults
-        UserDefaults.standard.set(fontsDownloaded, forKey:FontManager.downloadedFonts)
+        UserDefaults.standard.set(fontsDownloaded, forKey: FontManager.downloadedFonts)
         UserDefaults.standard.synchronize()
         return true
     }
@@ -76,8 +76,8 @@ class FontManager {
     //MARK: - folder helper methods
 
     private static func fontFolder() -> URL? {
-        let possibleURLs = FileManager.default.urls(for:.documentDirectory,
-                                                    in:[.userDomainMask])
+        let possibleURLs = FileManager.default.urls(for: .documentDirectory,
+                                                    in: [.userDomainMask])
         guard let documentsDirectory = possibleURLs.first
             else {
                 return nil

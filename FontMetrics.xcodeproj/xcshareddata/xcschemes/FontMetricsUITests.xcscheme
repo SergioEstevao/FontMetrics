@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1140"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF7AF4B31E97E6D9007B6096"
-               BuildableName = "FontMetrics.app"
-               BlueprintName = "FontMetrics"
+               BlueprintIdentifier = "FF7AF4D71E97E6D9007B6096"
+               BuildableName = "FontMetricsUITests.xctest"
+               BlueprintName = "FontMetricsUITests"
                ReferencedContainer = "container:FontMetrics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,26 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF7AF4B31E97E6D9007B6096"
-            BuildableName = "FontMetrics.app"
-            BlueprintName = "FontMetrics"
-            ReferencedContainer = "container:FontMetrics.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF7AF4CC1E97E6D9007B6096"
-               BuildableName = "FontMetricsTests.xctest"
-               BlueprintName = "FontMetricsTests"
-               ReferencedContainer = "container:FontMetrics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -69,16 +50,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF7AF4B31E97E6D9007B6096"
-            BuildableName = "FontMetrics.app"
-            BlueprintName = "FontMetrics"
-            ReferencedContainer = "container:FontMetrics.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -86,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF7AF4B31E97E6D9007B6096"
-            BuildableName = "FontMetrics.app"
-            BlueprintName = "FontMetrics"
+            BlueprintIdentifier = "FF7AF4D71E97E6D9007B6096"
+            BuildableName = "FontMetricsUITests.xctest"
+            BlueprintName = "FontMetricsUITests"
             ReferencedContainer = "container:FontMetrics.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

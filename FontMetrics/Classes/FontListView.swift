@@ -39,6 +39,7 @@ struct FontListView: View {
                     }
                 }
             }
+            .modifier(AdaptsToSoftwareKeyboard())
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Fonts"))
             .navigationBarItems(trailing: Button(action: {

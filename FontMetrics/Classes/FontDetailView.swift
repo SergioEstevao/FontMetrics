@@ -12,7 +12,7 @@ struct FontMetricRowView: View {
             Spacer()
             Text("\(value as NSNumber, formatter: Style.metricFormatter)")
                 .font(Font.body.monospacedDigit())
-        }
+        }.padding()
     }
 }
 
@@ -87,7 +87,7 @@ struct FontDetailView: View {
                 FontStylesRowView(label: "Caption 2", font: font.wrappedValue, style: .caption2)
                 FontStylesRowView(label: "Footnote", font: font.wrappedValue, style: .footnote)
             }
-        }
+        }.modifier(AdaptsToSoftwareKeyboard())
     }
 }
 

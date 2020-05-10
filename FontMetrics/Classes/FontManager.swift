@@ -13,6 +13,10 @@ class FontManager {
         loadFonts()
     }
 
+    static func ensureCustomFontsAreLoaded() {
+        FontManager.shared.loadFonts()
+    }
+
     private func loadFonts() {
         guard let dict = UserDefaults.standard.object(forKey: FontManager.downloadedFonts) as? [String: String] else {
             return

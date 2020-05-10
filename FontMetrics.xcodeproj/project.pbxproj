@@ -23,6 +23,7 @@
 		FFA7F0CF1EA40888007D3244 /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0CE1EA40888007D3244 /* Icon-64.png */; };
 		FFA7F0D11EA40953007D3244 /* Icon-320.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0D01EA40953007D3244 /* Icon-320.png */; };
 		FFA7F0D31EA40BC9007D3244 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7F0D21EA40BC9007D3244 /* FontManager.swift */; };
+		FFB9489E246870C200962191 /* AdjustsToSofwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		FFA7F0CE1EA40888007D3244 /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
 		FFA7F0D01EA40953007D3244 /* Icon-320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-320.png"; sourceTree = "<group>"; };
 		FFA7F0D21EA40BC9007D3244 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustsToSofwareKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
 				FF4DEACF2444BF8800ACA032 /* UIFont+Traits.swift */,
 				FF4DEAD12445259400ACA032 /* UIFont+SwiftUI.swift */,
+				FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */,
 				FF4DEAD02444BF8800ACA032 /* UIFont+Traits.swift in Sources */,
 				FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */,
+				FFB9489E246870C200962191 /* AdjustsToSofwareKeyboard.swift in Sources */,
 				FF90300223E1F90200D5626D /* FontListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

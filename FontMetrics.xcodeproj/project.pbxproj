@@ -159,11 +159,11 @@
 			children = (
 				FF7AF4EB1E97E89A007B6096 /* AppDelegate.swift */,
 				FF7AF4EE1E97E89A007B6096 /* FontMetricsView.swift */,
-				FFA7F0D21EA40BC9007D3244 /* FontManager.swift */,
-				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
 				FF90300123E1F90200D5626D /* FontListView.swift */,
 				FF4DEACB2441365E00ACA032 /* FontDetailView.swift */,
 				FF4DEACD2441DC7F00ACA032 /* Style.swift */,
+				FFA7F0D21EA40BC9007D3244 /* FontManager.swift */,
+				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
 				FF4DEACF2444BF8800ACA032 /* UIFont+Traits.swift */,
 				FF4DEAD12445259400ACA032 /* UIFont+SwiftUI.swift */,
 			);

@@ -1,11 +1,13 @@
 import Foundation
 import UIKit
 
-class FontManager {
+class FontManager: ObservableObject {
 
     static let downloadedFonts = "DownloadedFonts"
 
     var fontsDownloaded = [String: String]()
+
+    @Published private(set) var fontFamilies: [String: [String]] = [:]
 
     static let shared = FontManager()
 
@@ -13,8 +15,13 @@ class FontManager {
         loadFonts()
     }
 
+    static func ensureCustomFontsAreLoaded() {
+        FontManager.shared.loadFonts()
+    }
+
     private func loadFonts() {
         guard let dict = UserDefaults.standard.object(forKey: FontManager.downloadedFonts) as? [String: String] else {
+            refreshFonts()
             return
         }
         fontsDownloaded = dict
@@ -28,6 +35,7 @@ class FontManager {
             }
             let _ = try? UIFont.registerFontFrom(data: data)
         }
+        refreshFonts()
     }
 
     @discardableResult func addFont(fromURL url: URL) throws -> String {
@@ -49,6 +57,9 @@ class FontManager {
         // save it to userDefaults
         UserDefaults.standard.set(fontsDownloaded, forKey: FontManager.downloadedFonts)
         UserDefaults.standard.synchronize()
+
+        refreshFonts()
+
         return name
     }
 
@@ -99,4 +110,7 @@ class FontManager {
         return  uniqueFileName
     }
 
+    func refreshFonts() {
+        fontFamilies = UIFont.fontFamilies
+    }
 }

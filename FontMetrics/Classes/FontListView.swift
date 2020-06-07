@@ -2,11 +2,11 @@ import SwiftUI
 
 struct FontListView: View {
     @State var searchQuery: String = ""
-    private let fontFamilies = UIFont.fontFamilies
+    @ObservedObject var fontManager = FontManager.shared
     @State var searchVisible: Bool = false
 
     private var fontSource: [String] {
-        var result = fontFamilies.keys.sorted()
+        var result = fontManager.fontFamilies.keys.sorted()
         if !searchQuery.trimmingCharacters(in: .whitespaces).isEmpty {
             result = result.filter({ (fontFamily) -> Bool in
                 fontFamily.localizedCaseInsensitiveContains(searchQuery)
@@ -16,10 +16,10 @@ struct FontListView: View {
     }
 
     private var defaultFontName: String {
-        guard let name = fontFamilies.keys.sorted().first else {
+        guard let name = fontManager.fontFamilies.keys.sorted().first else {
             return ""
         }
-        return fontFamilies[name]![0]
+        return fontManager.fontFamilies[name]![0]
     }
 
     var body: some View {
@@ -32,13 +32,14 @@ struct FontListView: View {
                 }
                 ForEach(fontSource, id: \.self) { familyName in
                     Section(header: Text(familyName)) {
-                        ForEach( self.fontFamilies[familyName]!, id: \.self) { fontName in
+                        ForEach( self.fontManager.fontFamilies[familyName]!, id: \.self) { fontName in
                             NavigationLink(fontName, destination: FontDetailView(
                                 fontName: fontName).navigationBarTitle(fontName))
                         }
                     }
                 }
             }
+            .modifier(AdaptsToSoftwareKeyboard())
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Fonts"))
             .navigationBarItems(trailing: Button(action: {

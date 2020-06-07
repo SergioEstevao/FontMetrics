@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        FontManager.ensureCustomFontsAreLoaded()
         let contentView = FontListView()
         self.window!.rootViewController = UIHostingController(rootView: contentView)
         self.window?.makeKeyAndVisible()

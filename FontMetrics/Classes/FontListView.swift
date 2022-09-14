@@ -25,11 +25,6 @@ struct FontListView: View {
     var body: some View {
         NavigationView {
             List {
-                if searchVisible {
-                    Section(header: Text("Search")) {
-                        TextField("Search", text: $searchQuery)
-                    }
-                }
                 ForEach(fontSource, id: \.self) { familyName in
                     Section(header: Text(familyName)) {
                         ForEach( self.fontManager.fontFamilies[familyName]!, id: \.self) { fontName in
@@ -38,17 +33,11 @@ struct FontListView: View {
                         }
                     }
                 }
-            }
-            .modifier(AdaptsToSoftwareKeyboard())
+            }            
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Fonts"))
-            .navigationBarItems(trailing: Button(action: {
-                self.searchVisible.toggle()
-            }, label: {
-                Image(systemName: "magnifyingglass")
-            }))
             FontDetailView(fontName: defaultFontName).navigationBarTitle(defaultFontName)
-        }
+        }.searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode:.always), prompt: Text("Search"))
     }
 }
 

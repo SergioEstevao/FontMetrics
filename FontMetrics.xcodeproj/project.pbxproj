@@ -525,6 +525,7 @@
 				CURRENT_PROJECT_VERSION = 1.4.1.0;
 				DEVELOPMENT_TEAM = EU2XG9855J;
 				INFOPLIST_FILE = FontMetrics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sergioestevao.fontmetrics;
@@ -541,6 +542,7 @@
 				CURRENT_PROJECT_VERSION = 1.4.1.0;
 				DEVELOPMENT_TEAM = EU2XG9855J;
 				INFOPLIST_FILE = FontMetrics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sergioestevao.fontmetrics;

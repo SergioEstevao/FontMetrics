@@ -33,11 +33,11 @@ struct FontListView: View {
                         }
                     }
                 }
-            }            
+            }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Fonts"))
             FontDetailView(fontName: defaultFontName).navigationBarTitle(defaultFontName)
-        }.searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode:.always), prompt: Text("Search"))
+        }.searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("Search"))
     }
 }
 

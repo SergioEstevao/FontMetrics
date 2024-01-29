@@ -23,7 +23,6 @@
 		FFA7F0CF1EA40888007D3244 /* Icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0CE1EA40888007D3244 /* Icon-64.png */; };
 		FFA7F0D11EA40953007D3244 /* Icon-320.png in Resources */ = {isa = PBXBuildFile; fileRef = FFA7F0D01EA40953007D3244 /* Icon-320.png */; };
 		FFA7F0D31EA40BC9007D3244 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7F0D21EA40BC9007D3244 /* FontManager.swift */; };
-		FFB9489E246870C200962191 /* AdjustsToSofwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		FFA7F0CE1EA40888007D3244 /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
 		FFA7F0D01EA40953007D3244 /* Icon-320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-320.png"; sourceTree = "<group>"; };
 		FFA7F0D21EA40BC9007D3244 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
-		FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustsToSofwareKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +166,6 @@
 				FF5CA0CB1EA6320F0082DAEE /* UIFont+CustomFontExtension.swift */,
 				FF4DEACF2444BF8800ACA032 /* UIFont+Traits.swift */,
 				FF4DEAD12445259400ACA032 /* UIFont+SwiftUI.swift */,
-				FFB9489D246870C200962191 /* AdjustsToSofwareKeyboard.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,8 +251,9 @@
 		FF7AF4AC1E97E6D9007B6096 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Sergio Estevao";
 				TargetAttributes = {
 					FF7AF4B31E97E6D9007B6096 = {
@@ -357,7 +355,6 @@
 				FF4DEACC2441365E00ACA032 /* FontDetailView.swift in Sources */,
 				FF4DEAD02444BF8800ACA032 /* UIFont+Traits.swift in Sources */,
 				FF4DEACE2441DC7F00ACA032 /* Style.swift in Sources */,
-				FFB9489E246870C200962191 /* AdjustsToSofwareKeyboard.swift in Sources */,
 				FF90300223E1F90200D5626D /* FontListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +440,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -457,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -504,6 +502,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -512,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -529,7 +528,7 @@
 				CURRENT_PROJECT_VERSION = 1.5.0;
 				DEVELOPMENT_TEAM = EU2XG9855J;
 				INFOPLIST_FILE = FontMetrics/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +548,7 @@
 				CURRENT_PROJECT_VERSION = 1.5.0;
 				DEVELOPMENT_TEAM = EU2XG9855J;
 				INFOPLIST_FILE = FontMetrics/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
